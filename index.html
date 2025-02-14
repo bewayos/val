@@ -9,11 +9,11 @@
             margin: 0;
             overflow: hidden;
             background-color: black;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
         canvas {
@@ -23,6 +23,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.2);
+            z-index: 0; /* Серце на задньому плані */
         }
 
         #valentine-text {
@@ -34,6 +35,7 @@
             text-shadow: 0 0 10px rgba(248, 161, 209, 0.8);
             opacity: 0;
             transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+            z-index: 1; /* Текст поверх анімації */
         }
 
         .show-text {
