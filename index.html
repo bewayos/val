@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Particles</title>
+    <script src="https://unpkg.com/nextparticle@1.1.2/dist/nextparticle.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img id="valentine" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Heart_coraz%C3%B3n.svg" style="display: none;">
+    <script>
+        const heart = new NextParticle({
+            renderer: 'webgl',
+            image: document.querySelector('#valentine'),
+            width: window.innerWidth,
+            height: window.innerHeight,
+            particleGap: 2,
+            particleSize: 1.5,
+            mouseForce: 100,
+            noise: 10,
+            layerCount: 3,
+            layerDistance: 5,
+        });
+
+        window.addEventListener("resize", () => {
+            heart.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
