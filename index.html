@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>for-totane-by-byo</title>
+    <title>Heart Animation Effect</title>
 
     <style>
         body {
@@ -33,21 +33,16 @@
             font-weight: bold;
             color: #f8a1d1; /* Пастельно-рожевий */
             text-shadow: 0 0 10px rgba(248, 161, 209, 0.8);
-            opacity: 0;
-            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+            opacity: 1; /* Одразу видно */
+            transform: translateY(-10px);
             z-index: 1; /* Текст поверх анімації */
-        }
-
-        .show-text {
-            opacity: 1;
-            transform: translateY(-10px); /* Легке підняття при появі */
         }
     </style>
 </head>
 <body>  
     <canvas id="heart"></canvas>
     
-    <!-- Текст, що з’явиться через 8 секунд внизу -->
+    <!-- Текст одразу видно -->
     <div id="valentine-text">Happy Valentine's Day! ❤️</div>
 
     <script src="script.js"></script>
