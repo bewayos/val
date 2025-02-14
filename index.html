@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>4-totane-by-byo</title>
+    <title>Heart Animation Effect</title>
 
     <style>
         body {
             margin: 0;
             overflow: hidden;
             background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
         }
+
         canvas {
             position: absolute;
             left: 0;
@@ -18,28 +24,28 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.2);
         }
+
         #valentine-text {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
+            bottom: 5%;
+            font-size: 2rem;
             font-weight: bold;
-            color: #ff4b5c;
-            text-shadow: 0 0 10px rgba(255, 75, 92, 0.8);
+            color: #f8a1d1; /* Пастельно-рожевий */
+            text-shadow: 0 0 10px rgba(248, 161, 209, 0.8);
             opacity: 0;
             transition: opacity 2s ease-in-out, transform 2s ease-in-out;
         }
+
         .show-text {
             opacity: 1;
-            transform: translate(-50%, -50%) scale(1.1);
+            transform: translateY(-10px); /* Легке підняття при появі */
         }
     </style>
 </head>
 <body>  
     <canvas id="heart"></canvas>
     
-    <!-- Текст, що з'явиться через 8 секунд -->
+    <!-- Текст, що з’явиться через 8 секунд внизу -->
     <div id="valentine-text">Happy Valentine's Day! ❤️</div>
 
     <script src="script.js"></script>
