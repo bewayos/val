@@ -1,4 +1,14 @@
- 
+document.addEventListener("DOMContentLoaded", () => {
+    const text = document.getElementById("valentine-text");
+
+    // Через 8 секунд додаємо клас, який активує анімацію
+    setTimeout(() => {
+        text.classList.add("show-text");
+    }, 8000);
+});
+
+
+
 window.requestAnimationFrame =
 window.__requestAnimationFrame ||
     window.requestAnimationFrame ||
